@@ -1,5 +1,7 @@
 import React, {} from 'react';
-
+import './App.css'
+import Main from './components/main/Main';
+import MapRoad from './components/MapRoad/MapRoad';
 
 function App() {
 
@@ -8,7 +10,8 @@ function App() {
   return (
     <div >
 
-      hello world
+      <Main></Main>
+      <MapRoad></MapRoad>
       
     </div>
   );

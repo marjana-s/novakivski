@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:ital,wght@0,300;0,400;1,200&display=swap');
+
+.number{
+    font-size: 200px;
+    height: 100px;
+    color: #660000;
+    font-family: 'Lora', serif;
+    
+}
+  .show_right.element-animation.element-show {
+    
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   color:blue;
+   transition: 2s;
+  }
+  
+  .my-class{
+    height: 100px;
+    position: fixed;
+    top: 200px;
+    left: 770px;
+
+  }
+  .line{
+    position: absolute;
+    top: 1200px;
+    left: 770px;
+    
+    color: black;
+  }
+.first_period{
+  margin-top: 150px;
+}
+  .text{
+    width: 600px;
+    height: 450px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .caption{
+    height: 100px;
+    width: 250px;
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: 18px;
+  }
+  .mother_img{
+    width: 500px;
+    height: 594px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .father_img{
+    width: 500px;
+    height: 594px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .parents{
+    display: flex;
+    justify-content: space-around;
+  }
+  .father_text{
+    font-size: 20px;
+    width: 450px;
+    height: 250px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+  }
+  .page_1882{
+    display: flex;
+    justify-content: space-around;
+  }
+  .left_side_info{
+    width: 490px;
+    height: 700px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .left_side_text{
+    margin-bottom: 20px;
+  }
+  .right_side{
+    margin-top: 200px;
+    width: 490px;
+    height: 700px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .right_side_text{
+    margin-bottom: 20px;
+  }
+  .right_side_text1{
+    margin-top: 200px;
+  }
