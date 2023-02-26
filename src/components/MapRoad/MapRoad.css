@@ -1,7 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:ital,wght@0,300;0,400;1,200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 .number{
     font-size: 200px;
     height: 100px;
@@ -36,72 +36,43 @@
 .first_period{
   margin-top: 150px;
 }
-  .text{
-    width: 600px;
-    height: 450px;
+
+  .page1888{
+    margin-top: 150px;
     font-family: 'Montserrat';
     font-weight: 400;
+    display: flex;
+    justify-content: space-around;
     font-size: 20px;
   }
-  .caption{
-    height: 100px;
-    width: 250px;
-    font-family: 'Montserrat';
-    text-align: center;
-    font-size: 18px;
+
+  .left_sticks{
+    height: 1000px;
+    width: 569px;
+
   }
-  .mother_img{
-    width: 500px;
-    height: 594px;
+  .right_sticks{
+    height: 1000px;
+    width: 480px;
+
+  }
+  .img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
-  .father_img{
-    width: 500px;
-    height: 594px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  .parents{
-    display: flex;
-    justify-content: space-around;
-  }
-  .father_text{
-    font-size: 20px;
-    width: 450px;
-    height: 250px;
-    font-family: 'Montserrat';
-    font-weight: 400;
-  }
-  .page_1882{
-    display: flex;
-    justify-content: space-around;
-  }
-  .left_side_info{
-    width: 490px;
-    height: 700px;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 20px;
-  }
-  .left_side_text{
-    margin-bottom: 20px;
-  }
-  .right_side{
-    margin-top: 200px;
-    width: 490px;
-    height: 700px;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 20px;
-  }
-  .right_side_text{
-    margin-bottom: 20px;
-  }
-  .right_side_text1{
-    margin-top: 200px;
-  }
+.text_bot{
+  margin-bottom: 150px;
+}
+.text_top{
+  margin-top: 50px;
+}
+.caption{
+  width: 350px;
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  color: #212121;
+  text-align: center;
+}
