@@ -28,7 +28,7 @@
   margin-top: 150px;
 }
 
-  .page1888{
+  .page{
     margin-top: 150px;
     font-family: 'Montserrat';
     font-weight: 400;
@@ -37,12 +37,12 @@
     font-size: 20px;
   }
 
-  .left_sticks{
+  .left_side{
     height: 1000px;
     width: 569px;
 
   }
-  .right_sticks{
+  .right_side{
     height: 1000px;
     width: 480px;
 
@@ -66,4 +66,31 @@
   font-size: 24px;
   color: #212121;
   text-align: center;
+  margin-top: 5px;
+}
+.high_margin_top{
+  margin-top: 350px;
+}
+.mid_margin_top{
+  margin-top: 175px;
+}
+.low_margin_top{
+  margin-top: 30px;
+}
+@media screen and (max-width: 1601px) {
+  
+  .my-class{
+    height: 100px;
+    position: fixed;
+    top: 150px;
+    left: 550px;
+
+  }
+  .line{
+    position: absolute;
+    top: 1150px;
+    left: 550px;
+    
+    color: black;
+  }
 }
