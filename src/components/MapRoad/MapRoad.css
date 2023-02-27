@@ -9,15 +9,6 @@
     font-family: 'Lora', serif;
     
 }
-  .show_right.element-animation.element-show {
-    
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-   color:blue;
-   transition: 2s;
-  }
   
   .my-class{
     height: 100px;
