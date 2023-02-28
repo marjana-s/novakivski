@@ -12,9 +12,12 @@ function MapRoad() {
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
-      if (window.scrollY > 800 && window.scrollY <= 5600) {
+      if (window.scrollY > 800 && window.scrollY <= 5100) {
         setScrolled(true);
-      } else  {
+      } else if( window.scrollY > 6400){
+        setScrolled(true);
+      }
+      else  {
         setScrolled(false);
       }
     };
@@ -31,9 +34,10 @@ function MapRoad() {
 
   return (
     <div>
-      <div style={{height:900}}></div>
         <div  className="first_period">
-          <div className={scrolled ? "my-class" : "line"}><span className='number' >{number}</span></div>
+          <div className="center">
+            <div className={ scrolled ? "my-class" : "line"}><span className='number' >{number}</span></div>
+          </div>
           <div className="page">
             <div className="left_side">
               <p >Oleksa Novakivsky is strongly associated with Lviv. He lived in this city for 20 of his 63 years and is buried in Lychakiv Cemetery as a famous Lviv resident. However, he was born in eastern Podillia, in the village of Slobodo-Obodivka, Podillia province (now Vinnytsia region). There his father worked as a burglar for Count Feliks Sobanski. </p>

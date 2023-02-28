@@ -10,20 +10,7 @@
     
 }
   
-  .my-class{
-    height: 100px;
-    position: fixed;
-    top: 200px;
-    left: 770px;
-
-  }
-  .line{
-    position: absolute;
-    top: 1200px;
-    left: 770px;
-    
-    color: black;
-  }
+ 
 .first_period{
   margin-top: 150px;
 }
@@ -76,32 +63,34 @@
 }
 .low_margin_top{
   margin-top: 30px;
-}
-@media screen and (max-width: 1601px) {
+} 
+.my-class{
+  height: 400px;
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  transition: 1.5s;
+  opacity: 1;
   
-  .my-class{
-    
-    height: 400px;
-    position: fixed;
-    top: 150px;
-    left: 550px;
-    opacity: 1;
-    transition: 1s;
-    
-    
   }
   .line{
-    position: absolute;
-    top: 150px;
-    left: 550px;
-    transition: 1.5s;
-    opacity: 0;
-    color: black;
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  transition: 1s;
+  opacity: 0;
+  color: black;
   }
-}
+  .center{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
 .main_title{
-  margin-top: 800px;
-  height: 300px;
+  margin-top: 1100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,8 +108,8 @@
 .show_up.element-animation{
   transition: 1s;
   opacity: 0;
-  transform: translate(0px, 100%);
-  overflow: hidden;
+  transform: translate(0px, -100%);
+  
 }
 .show_up.element-animation.element-show{
   
@@ -128,3 +117,4 @@
   transition-delay: 0.5s;
   transform: translate(0px, 0px);
 }
+
