@@ -10,27 +10,30 @@ function MapRoad() {
 
   const [number, setNumber] = useState(1872);
   const [scrolled, setScrolled] = useState(false);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 1000) {
+
+  const handleScroll = () => {
+      if (window.scrollY > 800 && window.scrollY <= 5600) {
         setScrolled(true);
-      } else {
+      } else  {
         setScrolled(false);
       }
     };
+  useEffect(() => {
+    
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  useEffect(()=>{
+    AddAnim()
+  },[])
 
   return (
     <div>
+      <div style={{height:900}}></div>
         <div  className="first_period">
           <div className={scrolled ? "my-class" : "line"}><span className='number' >{number}</span></div>
-          {/* <div className="line"></div> */}
           <div className="page">
             <div className="left_side">
               <p >Oleksa Novakivsky is strongly associated with Lviv. He lived in this city for 20 of his 63 years and is buried in Lychakiv Cemetery as a famous Lviv resident. However, he was born in eastern Podillia, in the village of Slobodo-Obodivka, Podillia province (now Vinnytsia region). There his father worked as a burglar for Count Feliks Sobanski. </p>
@@ -41,7 +44,6 @@ function MapRoad() {
               <p className="low_margin_top">After temporary unemployment (which forced Oleksa to drop out of school and go to work as a clerk), his father got a job as a forester in the village of Popeliukhy with the Brzozowski family. The family moved there. It was in the estates of the nobles that little Oleksa first got acquainted with art. Their houses were decorated with ancient engravings, paintings, and old prints. In these residences, "as if in opposition to the northern Russian school, Western European painting traditions were nurtured, which were coming there more and more vividly and at a faster pace," Volodymyr Sas-Zalozetsky described in his monograph.
               </p>
             </div>
-
             <div className="right_side">
               <div className="img">
                 <img src={Father} alt="" />
@@ -69,7 +71,6 @@ function MapRoad() {
           </div>
 
           <div className="page">
-
             <div className="left_side">
               <p className="high_margin_top">Here is what Golubovsky writes about Oleksa's first training in A Spread of Mighty Wings. "He was a man of talent, but he had long been prim. He worked according to the patterns he had learned. Nevertheless, Oleksa Novakivsky learned a lot from him from a technical point of view. There he first began to master the technique of painting, and got acquainted with paints, their chemical composition, their proper use, and the peculiarities of drawing. The master already had three other students, older boys who had already worked for several years for the masters and were now painting on their own and taking a small fee for it. Oleksa was allowed by the master only occasionally and only for primitive tasks. Instead, Oleksa had to sweep the rooms, heat the stoves, do the housework, and go to town to buy things. For that, he got modest food. But in the evenings, when the master went to a restaurant, and in the mornings, when work in the workshop had not yet begun, Oleksa worked alone with charcoal and paint."</p>
               <div className="low_margin_top img">
@@ -78,7 +79,6 @@ function MapRoad() {
               </div>
               <p className="low_margin_top">"Novakivsky did not like painting iconostases. He would rather go to the sea and paint landscapes with the colors that Klymenko scraped off his palette," Sas-Zalozetskyi recalled.When Oleksa realized that there was nothing more to learn from Klymenko, he left his studies and did not accept his teacher's offer to study to become a master.</p>
             </div>
-
             <div className="right_side">
               <div className="high_margin_top img">
                 <img src={Pumpkins} alt="" />
@@ -87,6 +87,11 @@ function MapRoad() {
               <p className="mid_margin_top">After two years of studying, Oleksa had to return home to Obodivka because the master received a serious order and disbanded the school. After his return, Oleksa created more than 20 paintings that were lost.When Oleksa was sixteen years old, a local forestry engineer, Henrik Pavlias, paid for him to study in Odesa. For four years, Novakivsky studied art in the studio of the artist Pylyp Klymenko and worked with him on an iconostasis in the village of Kubantsi. "He was also a bit formulaic in his compositions and thoughts, but he was much better than the first master in his painting technique. He also painted good portraits and successful landscapes, which earned him good money. He recognized Oleksa's considerable talent and initiative, agreed to pay him a salary and gave him some money to work on his own. Now Oleksa could buy himself various books, which he used to supplement his education on his own," Holubovsky wrote.</p>
             </div>
           </div>
+        </div>
+
+        <div className="second_period">
+          <div className="main_title show_up element-animation"><h2>Krakow Academy of Fine Arts.</h2></div>
+            
         </div>
         <div style={{height:2000}}></div>
     </div>
