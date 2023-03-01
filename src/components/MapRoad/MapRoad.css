@@ -16,6 +16,7 @@
 }
 
   .page{
+    height: 1300px;
     margin-top: 150px;
     font-family: 'Montserrat';
     font-weight: 400;
@@ -89,7 +90,7 @@
   }
 
 .main_title{
-  margin-top: 1100px;
+  margin-top: 400px;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -118,3 +119,9 @@
   transform: translate(0px, 0px);
 }
 
+.title{
+  height: 800px;
+}
+.margin_left{
+  margin-left: 25px;
+}
