@@ -8,16 +8,20 @@ import Sticks from  '../../img/Sticks.png'
 import Yan from '../../img/Yan.png'
 import Leon from '../../img/Leon.png'
 import Fair from '../../img/Fair.png'
+import Maria from '../../img/Maria.png'
+import Muse from '../../img/Muse.png'
 function MapRoad() {
 
-
+  const [ view, setView] = useState(true)
   const [number, setNumber] = useState(1872);
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
       if (window.scrollY > 800 && window.scrollY <= 5300) {
         setScrolled(true);
-      } else if( window.scrollY > 6400){
+      } else if( window.scrollY > 6400 &&  window.scrollY <= 9400){
+        setScrolled(true);
+      }else if( window.scrollY > 10500){
         setScrolled(true);
       }
       else  {
@@ -133,6 +137,30 @@ function MapRoad() {
               <div className="img mid_margin_top">
                 <img src={Fair} alt="" />
                 <p className="caption">A fair in Ukraine. 1903</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="title">
+            <div className="main_title show_up element-animation"><h2>Novakivskyi's muse Creative life and new acquaintances</h2></div>
+          </div>
+
+          <div className="page">
+            <div className="left_side">
+              <div className="img">
+                <img src={Maria} alt="" />
+                <p className="caption">Anna Maria Novakivska. Photo from 1919.</p>
+              </div>
+              <p className="mid_margin_top"> "Initially, she stood in that marriage under the overwhelming influence of Oleksa's strongly pronounced individuality. His God became at once his God, his faith became her faith, his aspirations became his passion, his homeland became her homeland... But soon she moves on. This exceptional woman was his wing and friend, his guardian and his true support," Ivan Holubovsky writes in The Span of Mighty Wings.</p>
+              <p> Her family was poor Hural (Polish Hutsuls). And in honor of his wife's origins, Oleksa Novakivsky asked her to wear Hural clothes, which added to her authenticity. Authenticity.</p>
+              <p className="low_margin_top margin_left">"My dear and very dear Nusenko! It is a wonderful moonlit night. And I am with You in my thoughts and soul. My dear, how beautiful it is here! And I miss You to the point of complete happiness. How happy I will be if You stay here in Shlyakhtyntsi, for without You I will be very much covered... Come now, when the moonlit nights are so beautiful. I want to look into your blue eyes. Your blue eyes are my eternal joy." (letter from 1924).</p>
+            </div>
+            <div className="right_side">
+              <p>Oleksa Novakivsky moved to the village of Mohyla in the suburbs of Krakow (like Bryukhovychi near Lviv or Bucha near Kyiv). There he rented a room from Rosalia Palmowska, a widow who lived in the house with her daughter Anna Maria.There he found his first admirer. A doctor from Krakow, Hohulski, visited a patient near that house when Oleksa was seriously ill. In addition to medical care and treatment, Novakivsky also received financial support from the couple Yosyp and Leontyna, who from then on bought his paintings and hosted him in their home. In their home, Oleksa met Bohdan Lepkyi and his future friend Ivan Holubovsky, who was Leontyna's brother.</p>
+              <p className="low_margin_top margin_left">Rosalie Palmovska’s daughter was interested in Oleksa's work and spent hours watching him work. When Mrs. Palmovska died, the artist began to take care of the orphan. Gradually, their communication grew into tender love. "You are my only sunny love," Novakivskyi would say to Anna Maria. </p>
+              <div className="img mid_margin_top">
+                <img src={Muse} alt="" />
+                <p className="caption">My muse. 1910. Oil on canvas</p>
               </div>
             </div>
           </div>
