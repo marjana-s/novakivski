@@ -10,26 +10,65 @@ import Leon from '../../img/Leon.png'
 import Fair from '../../img/Fair.png'
 import Maria from '../../img/Maria.png'
 import Muse from '../../img/Muse.png'
+import Hapiness from '../../img/Hapiness.png'
+import Andrey from '../../img/Andrey.png'
+import Plywood from '../../img/Plywood.png'
+import Panel from '../../img/Panel.png'
+import Heart_j from '../../img/heart_j.png'
+import Lazarus from '../../img/Lazarus.png'
+import Heart_s from '../../img/heart_s.png'
+import Yarik from '../../img/Yarik.png'
+import Sviatik from '../../img/Sviatik.png'
+import Self from '../../img/Self.png'
+import Kids from '../../img/Kids.png'
+import Wife from '../../img/Wife.png'
+
+
+
 function MapRoad() {
 
   const [ view, setView] = useState(true)
   const [number, setNumber] = useState(1872);
   const [scrolled, setScrolled] = useState(false);
 
-  const handleScroll = () => {
-      if (window.scrollY > 800 && window.scrollY <= 5300) {
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.pageYOffset;
+      if (scrolled < 1700) {
+        setNumber(1872);
+      } else if (scrolled >= 1700 && scrolled <= 3000) {
+        const diff = Math.round(10 * ((scrolled - 1700) / 1300)) ;
+        setNumber(1872 + diff);
+      } else if (scrolled > 3000) {
+        setNumber(1882);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 800 && window.scrollY <= 5400) {
         setScrolled(true);
-      } else if( window.scrollY > 6400 &&  window.scrollY <= 9400){
+      } else if( window.scrollY > 6500 &&  window.scrollY <= 9500){
         setScrolled(true);
-      }else if( window.scrollY > 10500){
+      }else if( window.scrollY > 10600 && window.scrollY <= 20400 ){
+        setScrolled(true);
+      }else if( window.scrollY > 21600 ){
         setScrolled(true);
       }
       else  {
         setScrolled(false);
       }
     };
-  useEffect(() => {
-    
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -164,6 +203,113 @@ function MapRoad() {
               </div>
             </div>
           </div>
+
+          <div className="page">
+            <div className="left_side">
+              <p className="mid_margin_top"> Ivan Holubovskyi invited Novakivsky to visit him. Oleksa spent several months at his family estate in the village of Broshniv in the Boikivshchyna region. There, the young artist met Metropolitan Andrey Sheptytskyi, who was staying nearby at the summer residence of the Galician metropolitans, the Cedar Chamber, in the Pidliute tract.</p>
+              <p className="mid_margin_top">Later, their acquaintance grew into an offer to Oleksa to move to Lviv and then grew into friendship and partnership in the implementation of numerous artistic and educational projects, including the Art School (which was to become the Academy in the future) and the Ukrainian Secret University. </p>
+              <p className="mid_margin_top">Sheptytsky's exceptional personality prompted the artist to portray the Metropolitan many times: there are 18 paintings and more than 200 sketches and drawings. Novakivsky considered the Metropolitan's portrait not only a great creative challenge but also a matter of historical importance. This logically resonated with the philosophy of historical portraits of one of his teachers, Jan Matejko.</p>
+              <p className="low_margin_top">He not only showed the spiritual greatness of the bishop, but also depicted the brightest and most characteristic features of the Ukrainian cultural, historical, and spiritual environment. "The Metropolitan in Monastic Robes," "Moses," "A Heavy Sleep," "In the Metropolitan's Chair," and "The Prince of the Church." Many works depicting Sheptytsky were destroyed by the Soviet authorities during the so-called "inventory of funds."</p>
+            </div>
+            <div className="right_side">
+              <p className="mid_margin_top">When they met, Oleksa was already a graduate of the Krakow Academy of Arts with a bunch of honors and gold medals. And Vladyka saw in that personality not only the talent of an artist but also a teacher and a thinker.</p>
+              <p>They were partners and maybe even friends in a sense. Sheptytsky gladly bought Novakivsky's paintings, hosted the artist and his School at his Carpathian residence, and paid for his students' continued education in Europe. And when his great-grandfather passed away, he took in his orphaned children Yaroslav and Zhdan. By the way, some of the best photos of Oleksa Novakivsky were taken by Andrey Sheptytsky's personal photographer Yaroslav Koval.</p>
+              <div className="img mid_margin_top">
+                <img src={Hapiness} alt="" />
+                <p className="caption">Mother's happiness. 1910 р.Not returned from the exhibition in Moscow and Kharkiv</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="page">
+            <div className="left_side">
+              <p className="mid_margin_top">Oleksa Novakivsky's first solo exhibition took place in Krakow, where the artist presented more than 100 works that brought him recognition and popularity. Metropolitan Andrei Sheptytsky became interested in the paintings and offered the artist to move to Lviv to create the future Academy of Arts, for which he could not find a suitable candidate to lead it.</p>
+              <div className="img low_margin_top">
+                <img src={Andrey} alt="" />
+                <p className="caption">Metropolitan Andrey Sheptytsky</p>
+              </div>
+            </div>
+            <div className="right_side">
+              <div className="img mid_margin_top">
+                <img src={Plywood} alt="" />
+                <p className="caption">1910 р. Plywood, oil. Private collection</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="page1">
+            <div className="left_side">
+              <p>The collections of the newly created National Museum in Lviv included 143 drawings from three "Albums from St. Lazarus Hospital" presented to Andrey Sheptytsky as a token of gratitude for the Metropolitan's support. Founded in 1905 by Greek Catholic Metropolitan Andrey Sheptytsky as a private foundation, in 1913 it was solemnly donated to the Ukrainian people. </p>
+              <div className="img low_margin_top">
+                <img src={Panel} alt="" />
+                <p className="caption">Art. Panel for the musical societynamed after M. Lysenko in Lviv. 1913-1914</p>
+              </div>
+              <div className="img mid_margin_top">
+                <img src={Heart_j} alt="" />
+                <p className="caption">A sketch of the composition "Heart of Jesus" for a stained-glass window project. 1913 р.Paper and ink. Collection of the Andrey Sheptytsky National Museum of Art</p>
+              </div>
+            </div>
+            <div className="right_side">
+              <div className="img ">
+                <img src={Lazarus} alt="" />
+                <p className="caption">"At St. Lazarus Hospital (Unrest). 1913"</p>
+              </div>
+              <div className="img low_margin_top">
+                <img src={Heart_s} alt="" />
+                <p className="caption">A sketch of the composition "Heart of a Sousa" for a stained-glass window project. 1913 р.Album of drawings from St. Lazarus HospitalPaper, pencil Collection of the Andrey Sheptytsky NML</p>
+              </div>
+              <p className="mid_margin_top">Subsequently, many paintings were transferred to the museum as payment for the apartment next to the studio.</p>
+            </div>
+          </div>
+
+          <div className="page">
+            <div className="left_side ">
+              <div className="img">
+                <img src={Yarik} alt="" />
+                <p className="caption">"Yaroslav Osmomysl - Warrior"</p>
+              </div>
+              <p>The impetus for the creation was the proposal of the head of the USS Press Apartment, writer Osyp Nazaruk, to illustrate his novel Prince Yaroslav Osmomysl. Novakivskyi was also approached by the Kyiv publishing company Vernyhora and offered to create portraits for textbooks on the history of Ukraine. </p>
+              <div className="img low_margin_top">
+                <img src={Sviatik} alt="" />
+                <p className="caption">"Sviatoslav the Conqueror</p>
+              </div>
+            </div>
+            <div className="right_side ">
+              <p>Novakivsky's move to Lviv coincided with tumultuous events - the outbreak of national liberation struggles on both sides of the Austrian-Russian border. Oleksa turned to historical themes and began a series of images of the princes of Russia. The images acquired a patriotic sound and awakened the fighting spirit.</p>
+              <div className="img mid_margin_top">
+                <img src={Self} alt="" />
+                <p className="caption">Self-portrait. 1913р. Cardboard, oil</p>
+              </div>
+              <p className="mid_margin_top">Novakivskyi created monumental drawing portraits of princes: "Yaroslav the Wise" (1917), "Sviatoslav the Conqueror" (1918), and "Yaroslav Osmomysl - Warrior" (1919).</p>
+            </div>
+          </div>
+
+          <div className="page">
+            <div className="left_side">
+              <div className="img">
+                <img src={Kids} alt="" />
+              </div>
+              <p className="half_mid_margin_top">Anna Maria Palmovska and Oleksa Nowakiwsky got married after moving to Lviv. They were married by Metropolitan Andrei Sheptytsky himself. The Novakivskis had two sons, Yaroslav and Zhdan-Oleksa.</p>
+              <p className="half_mid_margin_top"> Oleksa, as a very sensitive and emotional person, had his own story about eros and the mystical power of women. But instead of a dark essence, he saw the birth of wings in a woman in the whirlwind of passion, which she uses to elevate a man. Anna Maria posed for him for the Awakening series of paintings. The artist worked on the idea for many years (in the 1910s and 1920s), and left a number of oil versions and preparatory graphic sketches.</p>
+              <p className="half_mid_margin_top">In the composition, the artist depicted a female figure waking up from a dream and stretching, "spreading her wings." Behind her is a certain symbolic background that has been transformed over time. As well as the central figure. In the Awakening series, she gradually changes from a little girl to a teenager and then to a young woman who is gaining both physical and spiritual maturity. This theme symbolizes the national revival of Ukraine.</p>
+            </div>
+            <div className="right_side">
+              <p>"The woman was the ruler of that era," French researchers of the turn-of-the-century symbolism movement in art say. A woman became a virgin in Secessionist works. In the time of existential reversal and the experience of the threat, and then the war itself, artists, in the face of death, sought the possibility of prolonging life in the irrational power of eros and in the life-giving feminine. Women's images not only occupy a dominant place in art at the turn of the century but also become the personification of mystical power and the owners of magic.</p>
+              <div className="img mid_margin_top">
+                <img src={Wife} alt="" />
+                <p className="caption">Portrait of the wife</p>
+              </div>
+              <p className="half_mid_margin_top">The symbol of the wings represents the yin of energy and the power of the roots as the yang of energy. And the secret of this unexpected narrative lies in his happy love in marriage, which was not so common at the time. Not everyone could afford to marry at the call of the heart.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="title">
+          <div className="main_title show_up element-animation"><h2> <span>Opening of an art school.</span> <span>Secret University.</span>  <span>Exhibitions</span> </h2></div>
+        </div>
+        <div className="third_period">
+
         </div>
         <div style={{height:2000}}></div>
     </div>
