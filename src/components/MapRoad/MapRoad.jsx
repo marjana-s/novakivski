@@ -40,8 +40,18 @@ function MapRoad() {
       } else if (scrolled >= 1700 && scrolled <= 3000) {
         const diff = Math.round(10 * ((scrolled - 1700) / 1300)) ;
         setNumber(1872 + diff);
-      } else if (scrolled > 3000) {
+      } else if (scrolled > 3000 && scrolled <3300) {
         setNumber(1882);
+      }else if(scrolled > 3300 && scrolled <= 4500){
+        const diff = Math.round(6 * ((scrolled - 3300) / 1200)) ;
+        setNumber(1882+diff)
+      }else if(scrolled > 4600 && scrolled <= 5400){
+        const diff = Math.round(4 * ((scrolled - 4600) / 800)) ;
+        setNumber(1888+diff)
+      }
+      else if(scrolled > 6500 && scrolled <= 9500){
+        const diff = Math.round(2 * ((scrolled - 6500) / 3000)) ;
+        setNumber(1900+diff)
       }
     };
 
