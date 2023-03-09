@@ -14,7 +14,15 @@
 .first_period{
   margin-top: 150px;
 }
-
+.page3{
+  height: 4500px;
+  margin-top: 150px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
   .page{
     height: 1300px;
     margin-top: 150px;
