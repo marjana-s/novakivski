@@ -24,8 +24,17 @@
     justify-content: space-around;
     font-size: 20px;
   }
+  .page2{
+    height: 1000px;
+    margin-top: 150px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+  }
   .page1{
-    height: 2000px;
+    height: 1800px;
     margin-top: 150px;
     font-family: 'Montserrat';
     font-weight: 400;
@@ -55,7 +64,7 @@
   margin-top: 50px;
 }
 .caption{
-  width: 360px;
+  width: 450px;
   font-family: 'Montserrat';
   font-style: italic;
   font-weight: 400;
@@ -80,7 +89,7 @@
   height: 400px;
   position: fixed;
   top: 20%;
-  left: 37%;
+  left: 40%;
   transition: 1.5s;
   opacity: 1;
   
@@ -88,7 +97,7 @@
   .line{
   position: fixed;
   top: 20%;
-  left: 37%;
+  left: 40%;
   transition: 1s;
   opacity: 0;
   color: black;

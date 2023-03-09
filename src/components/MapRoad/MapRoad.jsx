@@ -22,12 +22,31 @@ import Sviatik from '../../img/Sviatik.png'
 import Self from '../../img/Self.png'
 import Kids from '../../img/Kids.png'
 import Wife from '../../img/Wife.png'
+import Lecture from '../../img/Lecture.png'
+import Man from '../../img/Man.png'
+import Oleksa from '../../img/Oleksa.png'
+import Dora from '../../img/Dora.png'
+import Virgin from  '../../img/Virgin.png'
+import Girl from  '../../img/Girl.png'
+import Secret from  '../../img/Secret.png'
+import Holubovska from  '../../img/Holubovska.png'
+import Female from  '../../img/Female.png'
+import Metropolit from  '../../img/Metropolit.png'
+import Exhibition from '../../img/Exhibition.png'
+import Ukraine from '../../img/Ukraine.png'
+import Book from '../../img/Book.png'
+import Monograph from '../../img/Monograph.png'
+import Pictures from '../../img/Pictures.png'
+import Statuya from '../../img/Statuya.png'
+import Sons from '../../img/Sons.png'
+
+
 
 
 
 function MapRoad() {
 
-  const [ view, setView] = useState(true)
+
   const [number, setNumber] = useState(1872);
   const [scrolled, setScrolled] = useState(false);
 
@@ -72,7 +91,9 @@ function MapRoad() {
         setScrolled(true);
       }else if( window.scrollY > 10600 && window.scrollY <= 20400 ){
         setScrolled(true);
-      }else if( window.scrollY > 21600 ){
+      }else if( window.scrollY > 21600 && window.scrollY <= 32400 ){
+        setScrolled(true);
+      }else if( window.scrollY > 33500  ){
         setScrolled(true);
       }
       else  {
@@ -319,7 +340,157 @@ function MapRoad() {
           <div className="main_title show_up element-animation"><h2> <span>Opening of an art school.</span> <span>Secret University.</span>  <span>Exhibitions</span> </h2></div>
         </div>
         <div className="third_period">
+          <div className="page1">
+            <div className="left_side">
+              <p>In 1923, Oleksa Novakivsky founded an art school in Lviv. But this is not the school that you will find in Lviv today under the name of Novakivsky. Artist never taught children. Except for his own. </p>
+              <p className="high_margin_top">Among the students of the School are artists known in Ukraine and abroad, such as Roman Selskyi, Hryhorii Smolskyi, Edward Kozak, Sviatoslav Hordynskyi, Myron Levytskyi, and Mykhailo Moroz. In total, more than 100 students from all over Ukraine-from Galicia, Bukovyna, Hutsul, and even Volyn and Naddniprianshchyna-studied at the Novakivskyi School for free. These were talented adults from Ukrainian families who realized that without education they had no foundation for building a new state. In fact, they were inventing it as typical leaders of change, using what they had themselves.  </p>
+              <p className="high_margin_top">"In the folk art of Ukraine, we have the influence of Persia and India," said Oleksa Kharlampiyovych. "It also resonates with Egypt. It is rich in color and form. So, ethnography in art is very necessary, but not excessively so. A poet who is only interested in ethnography would not produce a poem unless he or she had an ethnographic study."</p>
+              <p className="mid_margin_top">The students united in groups of artists, giving birth to the Ukrainian page in the European history of postmodernism. There were three such groups in Lviv at the time: Artes (1929-1935), the Lviv Professional Union of Plastic Artists (1932-1939), and the Ukrainian Society of Art Supporters (1930-1939), which often acted as promoters of their members' works. </p>
+            </div>
+            <div className="right_side">
+              <div className="img">
+                <img src={Lecture} alt="" />
+                <div className="caption">A drawing lecture at the Oleksa Novakivskyi Art School. From left to right: O. Pleshkan, S. Hordynskyi, Zhdan and Yaroslav (sons of O. Novakivskyi), O. Novakivskyi, M. Moroz, H. Smolskyi. Photo from 1927.</div>
+              </div>
+              <p className="half_mid_margin_top">The Ukrainian elite of the time studied at his school. After all, according to the original plan of Andrey Sheptytsky, who invited Oleksa Novakivsky to create this educational space, it was to become the Academy of Arts in Western Ukraine in the future, reinforcing the important policy of developing the education of Ukrainians and strengthening the cultural space, the transformation of which was in its active phase, giving rise to numerous new trends and movements. The studio of the artist and teacher itself became a well-known cultural center in Western Ukraine, echoing the Krakow home of Lepky, which he attended as a student. </p>
+              <img className="mid_margin_top" src={Man} alt="" />
+            </div>
+          </div>
+          <div className="page1">
+            <div className="left_side">
+              <div className="img">
+                <img src={Oleksa} alt="" />
+                <p className="caption">Oleksa Novakivskyi. Portrait of Ivan Holubovsky</p>
+              </div>
+              <p className="half_mid_margin_top">The Krakow Academy of Arts, where Oleksa Novakivsky studied, was one of the trendy European schools at the time. So, when Oleksa moved to the culturally more provincial Lviv in 1913, he brought with him some newfangled chips. Among them was going to the plein air. </p>
+              <div className="img low_margin_top">
+                <img src={Dora} alt="" />
+                <p className="caption">Oleksa Novakivskyi in the open air in Dora</p>
+              </div>
+              <p className="low_margin_top">"We lived in a rented Hutsul hut, slept on benches, and at dawn, we would take off for trips to the mountains, always with cassettes, paints, and cardboard, and we would paint beautiful motifs with zeal. When they returned, they would place their sketches under the wall of the house, and Novakivsky would give us his comments," recalled a student of the school, Sviatoslav Hordynsky.</p>
+              <p className="low_margin_top margin_left">"And it is a characteristic thing that among the hundreds of those works about the same subject, there are no two that are similar to each other in a nutshell. Each of those works is accompanied by different music in form, color, light, and expression, so it is understandable why the students lovingly called the artist "the magician of St. George," Ivan Holubovsky recalled.</p>
+            </div>
+            <div className="right_side">
+              <p>The school united the Ukrainian elite of the region and implemented the principle of co-financing, which was mainly due to charitable donations. The educational process at the O. Novakivsky Art School was modeled after the Krakow Academy. Artists and intellectuals known in Galicia and beyond were involved in teaching. Metropolitan Andrey Sheptytsky personally taught a separate course on the history of world art to the school's students.</p>
+              <div className="img half_mid_margin_top">
+                <img src={Virgin} alt="" />
+                <p className="caption">The Virgin in silver robes. 1923 р.Board, oil. Private collection.</p>
+              </div>
+              <p className="half_mid_margin_top">His frequent trips to the Carpathians with the School and exhibitions of the works he created there were a common practice that introduced a new fashion. Both for painting landscapes "from life" and for receiving artists by wealthy Ukrainians who had their residences and estates (dachas) in the mountains. Every year, during the summer vacations, the students went to Kosmach for plein airs. The Hutsul region, its mythology, folk characters, rich rituals, and picturesque life of the Carpathian region were firmly embedded in the work of Oleksa Novakivsky and his students.</p>
+            </div>
+          </div>
 
+          <div className="page">
+            <div className="left_side">
+              <div className="img">
+                <img src={Secret} alt="" />
+                <p className="caption">Secret Ukrainian University</p>
+              </div>
+              <p className="mid_margin_top">Thus, in 1924 alone, the American diaspora donated $2,800. In May 1925, ten paintings by famous artists O. Novakivskyi, P. Kholodnyi, and P. Kovzhun were secretly raffled off in the "Lottery" of the Curatorium of Ukrainian High Schools to raise funds. </p>
+              <p className="high_margin_top">One of his most successful solo exhibitions was held at the National Gallery of Art Zachęta in Warsaw. An exhibition of his works was also being prepared in Vienna, which was negotiated by the famous art critic Zalozetsky. </p>
+            </div>
+            <div className="right_side">
+              <p>He became one of the secret professors. He headed the Faculty of Art of the Secret Ukrainian University. In its first year of existence, the university had three departments (faculties): philosophy, law, and medicine, and later a technical department was formed. In its first year alone, more than 1400 people studied there, 60 of them women. The university functioned on donations from students and their families, as well as on funds raised in the region and abroad.</p>
+              <div className="img low_margin_top">
+                <img src={Girl} alt="" />
+                <p className="caption">Girl with a Flower (Revolutionary). 1924 р.Oil on cardboard on canvas. Private collection</p>
+              </div>
+              <p className="mid_margin_top">By the way, the most important event that was to familiarize the European community with Novakivsky's work was to be a monograph in Ukrainian, German, and English, which was being prepared for publication by the Ukrainian Word publishing house in Berlin.</p>
+            </div>
+          </div>
+
+          <div className="page">
+            <div className="left_side">
+                <div className="img">
+                <img src={Female} alt="" />
+                <p className="caption">Portrait of a female artist at the piano / Music.1929 Plywood and oil on canvas.</p>
+              </div>
+              <div className="img mid_margin_top">
+                <img src={Holubovska} alt="" />
+                <p className="caption">Portrait of H. Holubovska (the so-called Spring).1929 Cardboard, opium.</p>
+              </div>
+            </div>
+            <div className="right_side">
+              <div className="img mid_margin_top">
+                <img src={Metropolit} alt="" />
+                <p className="caption">Metropolitan in monastic clothes.1930-1931. Plywood, oil.</p>
+              </div>
+              <p className="high_margin_top">It was organized in early 1920 by Colonel Hnat Zelenevsky, an aide to Hetman Pavlo Skoropadsky who lived in Berlin in exile.It was thanks to a similar multilingual monograph on Oleksandr Arkhypenko that the world began to admire the works of the Ukrainian sculptor and painter.  However, due to the liquidation of the publishing house, this project was never realized.</p>
+            </div>
+          </div>
+
+          <div className="page">
+            <div className="left_side high_margin_top">
+              <p>"Visiting the studio of the Ukrainian painter Oleksa Novakivsky is an unforgettable experience. He is like a patriarch, with bright piercing eyes and a friendly angelic smile. He is adored by young people, especially young artists, who experience the hospitality of his home.</p>
+              <p className="low_margin_top">To a stranger, he explains his work in eloquent, verbose Ukrainian, combined with expressive hand gestures. It is not that his paintings are not interesting in themselves, without explanatory comments; on the contrary, they would be highly valued in the best contemporary exhibition halls in Paris or Berlin, where they would attract attention with their feverish intensity of color, the strength of line, and a certain Byzantine strangeness.</p>
+            </div>
+            <div className="right_side">
+              <p className="half_mid_margin_top">Novakivsky's work became an object of interest for critics and art lovers during his lifetime, and his name was constantly on the pages of Lviv periodicals: Ukrainian, Polish, and Jewish. International publications also wrote about him, but due to the lack of research, there are few surviving archival references. Here is one of them from the correspondent of the British newspaper Frederick Augustus Foyt. "The work of A Ukrainian artist" (The Manchester Guardian. - 1932. - Jan. 15)</p>
+              <div className="img mid_margin_top">
+                <img src={Exhibition} alt="" />
+                <p className="caption">At the exhibition of the Ukrainian Society of Art Supporters at the National Art School Museum in Lviv. From left to right: Hryhoriy Smolsky, Antin Rak, Nadiya Makukh, Zenon Pelensky, Frederick August Foyt, Olha Nytkevych, Lidia Turkevych, Volodymyr Kovalchuk, Oleksa Novakivsky, Antin Malyuta, Stepan Lutsyk</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="page">
+            <div className="left_side">
+              <p>The school was represented by the works of its students in the Ukrainian pavilion at the Century of Progress World's Fair, which was held to mark the centennial of one of the largest American cities, Chicago. In Lviv, a helping committee was set up to collect exhibits for a separate Ukrainian pavilion: the National Museum, the Kosiv Hutsulshchyna Cooperative, the National Science and Technology Museum, the Boykivshchyna Museum in Sambir, and others joined the cooperation. </p>
+              <div className="img high_margin_top">
+                <img src={Ukraine} alt="" />
+                <p className="caption">Ukrainians at the 1933-1934 World's Fair in Chicago</p>
+              </div>
+            </div>
+            <div className="right_side ">
+              <p className="high_margin_top">О. Novakivsky submitted 19 of his own works to the exhibition, and several of his students decided to participate as well. However, after watching one of the film adaptations of the tragic story of the Titanic liner that sank in the waters of the Atlantic Ocean in April 1912 (perhaps it was the 1929 film The Atlantic by Ewald André Dupont or Frank Lloyd's war drama "Cavalcade" (1933)), the Maestro refused to participate in the Chicago exhibition because of the danger of transporting paintings by ocean (Voloshyn L. Olga Pleshkan. - Lviv, 2010. - P.136 - 137). As for Novakivskyi's pupils, their works were shown to the audience in the United States.</p>
+            </div>
+          </div>
+          
+          <div className="page2">
+            <div className="left_side">
+              <div className="img">
+                <img src={Book} alt="" />
+              </div>
+              <p className="mid_margin_top">In 2021, the Andrey Sheptytsky National Museum in Lviv prepared an expanded and scientifically researched reprint of the monograph for publication, but the book was never published. The book was supplemented with reprints of reviews of the aforementioned work by Volodymyr Zalozetskyi, as well as his articles about the artist's work.</p>
+              <p className="low_margin_top">These materials contain notes that inform about the persons, institutions, organizations, and place names mentioned in the text, explain outdated vocabulary, and provide translations of foreign language words. </p>
+            </div>
+            <div className="right_side">
+              <p className="half_mid_margin_top">The monograph "Oleksa Novakivsky" by the famous art critic and researcher Zalozetskyi is published. The monographs include 383 oil paintings and 20 graphic compositions.</p>
+              <div className="img">
+                <img src={Monograph} alt="" />
+                <p className="caption">О. Novakivsky. My Muse. Illustration from the monograph by V. Zalozetskyi.</p>
+              </div>
+              <p className="low_margin_top">The monograph is illustrated with photographs and reproductions of paintings and graphic works by Oleksa Novakivskyi. The author of the introductory article and the compiler of the publication is Iryna Rizun, the head of the Oleksa Novakivskyi Art and Memorial Museum.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="title">
+          <div className="main_title show_up element-animation"><h2> <span> The last work.</span> <span> The last days of life</span> <span>and the afterlife</span> </h2></div>
+        </div>
+
+        <div className="fourth_period">
+          <div className="page1">
+            <div className="left_side">
+              <p className="mid_margin_top">The crown of Novakivsky’s work was to be his last work, the icon "Mother of Mercy" ("Sviatoyurska Madonna"). The master painted it for the central altar wall of St. George's Cathedral. However, he did not finish it. The charcoal composition on canvas measuring 330×197 cm is a graphic sketch for the altar image of the Virgin Mary, which was to decorate the sanctuary of St. George's Cathedral.</p>
+              <div className="img mid_margin_top">
+                <img src={Pictures} alt="" />
+              </div>
+              <p className="half_mid_margin_top">This image is a kind of summary of the artist's creative work on the theme of the Virgin. While working on the icon, Novakivsky created about twenty oil sketches and almost a hundred drawings in pen, pencil, and charcoal. The creative idea evolved from the typical Eastern Christian interpretation of the Virgin Mary to the author's own, completely original interpretation based on a combination of ancient Ukrainian and Western European traditions.</p>
+              <p className="mid_margin_top">For more than forty years, the image was hidden in the vaults of the museum's collections in the former Armenian Cathedral. For the first time, the "Sviatoyurska Madonna" was exhibited at the posthumous exhibition of Novakivskyi's works held in 1936 at the Museum of the Shevchenko Scientific Society.  For the second time, thanks to the efforts of the artist's grandson Andriy Novakivskyi, Lviv residents and guests were able to see the last work of the outstanding artist in September 1992 at the jubilee exhibition dedicated to the 120th anniversary of Novakivsky's birth.</p>
+            </div>
+            <div className="right_side">
+              <div className="img">
+                <img src={Statuya} alt="" />
+              </div>
+              <p className="half_mid_margin_top">Negotiations between the community of St. George's Church and O. Novakivsky began in early 1934. The maestro refused the offer to create wall paintings in the church but gladly agreed to take on the image of the Virgin Mary, Mother of Mercy.  In May 1934, a formal agreement was signed between the two parties:  Novakivsky undertook to paint a monumental icon of the Virgin Mary on wood within three years, before creating a preparatory graphic sketch "to be presented to His Eminence, the Metropolitan."  The community of Sviatoyursk, in turn, undertook to pay for the artist's work, the total amount of services amounted to 18 thousand zlotys. </p>
+              <div className="img low_margin_top">
+                <img src={Sons} alt="" />
+                <p className="caption">0. Novakivskyi with his sons, students and supporters of the Art School during the celebration of his name day on Teple Oleksa Street.Photo 1935</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div style={{height:2000}}></div>
     </div>
