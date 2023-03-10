@@ -56,7 +56,8 @@ function MapRoad() {
       const scrolled = window.pageYOffset;
       if (scrolled < 1700) {
         setNumber(1872);
-      } else if (scrolled >= 1700 && scrolled <= 3000) {
+      }
+       else if (scrolled >= 1700 && scrolled <= 3000) {
         const diff = Math.round(10 * ((scrolled - 1700) / 1300)) ;
         setNumber(1872 + diff);
       } else if (scrolled > 3000 && scrolled <3300) {
@@ -67,11 +68,18 @@ function MapRoad() {
       }else if(scrolled > 4600 && scrolled <= 5400){
         const diff = Math.round(4 * ((scrolled - 4600) / 800)) ;
         setNumber(1888+diff)
-      }
-      else if(scrolled > 6500 && scrolled <= 9500){
+      } else if(scrolled > 6500 && scrolled <= 9500){
         const diff = Math.round(2 * ((scrolled - 6500) / 3000)) ;
         setNumber(1900+diff)
+      }else if(scrolled > 11200 && scrolled <= 13000){
+        const diff = Math.round(5 * ((scrolled - 11200) / 1800)) ;
+        setNumber(1904+diff)
+      }else if(scrolled > 13000 && scrolled <= 15000){
+        const diff = Math.round(2 * ((scrolled - 13000) / 2000)) ;
+        setNumber(1909+diff)
       }
+      
+      
     };
 
     window.addEventListener("scroll", handleScroll);
