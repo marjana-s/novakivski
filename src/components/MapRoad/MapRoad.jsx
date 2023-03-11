@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import './MapRoad.css'
 import { AddAnim } from "../../animation/animationOnScroll";
 import Mother from '../../img/Mother.png'
@@ -41,78 +41,30 @@ import Statuya from '../../img/Statuya.png'
 import Sons from '../../img/Sons.png'
 import Society from '../../img/Society.png'
 
-
+import { useScrollAnim } from "../../hooks/useScrollAnim";
+import { useNumber } from "../../hooks/useNumber";
 
 
 function MapRoad() {
 
 
-  const [number, setNumber] = useState(1872);
-  const [scrolled, setScrolled] = useState(false);
-
+ 
+  const [scrollAnim,scrolledState] = useScrollAnim();
+  const [numberGrow,numberState] = useNumber()
   
   useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      if (scrolled < 1700) {
-        setNumber(1872);
-      }
-       else if (scrolled >= 1700 && scrolled <= 3000) {
-        const diff = Math.round(10 * ((scrolled - 1700) / 1300)) ;
-        setNumber(1872 + diff);
-      } else if (scrolled > 3000 && scrolled <3300) {
-        setNumber(1882);
-      }else if(scrolled > 3300 && scrolled <= 4500){
-        const diff = Math.round(6 * ((scrolled - 3300) / 1200)) ;
-        setNumber(1882+diff)
-      }else if(scrolled > 4600 && scrolled <= 5400){
-        const diff = Math.round(4 * ((scrolled - 4600) / 800)) ;
-        setNumber(1888+diff)
-      } else if(scrolled > 6500 && scrolled <= 9500){
-        const diff = Math.round(2 * ((scrolled - 6500) / 3000)) ;
-        setNumber(1900+diff)
-      }else if(scrolled > 11200 && scrolled <= 13000){
-        const diff = Math.round(5 * ((scrolled - 11200) / 1800)) ;
-        setNumber(1904+diff)
-      }else if(scrolled > 13000 && scrolled <= 15000){
-        const diff = Math.round(2 * ((scrolled - 13000) / 2000)) ;
-        setNumber(1909+diff)
-      }
-      
-      
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    numberGrow()
   }, []);
 
-
+  
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 800 && window.scrollY <= 5400) {
-        setScrolled(true);
-      } else if( window.scrollY > 6500 &&  window.scrollY <= 9500){
-        setScrolled(true);
-      }else if( window.scrollY > 10600 && window.scrollY <= 20400 ){
-        setScrolled(true);
-      }else if( window.scrollY > 21600 && window.scrollY <= 32400 ){
-        setScrolled(true);
-      }else if( window.scrollY > 33500  ){
-        setScrolled(true);
-      }
-      else  {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    scrollAnim()
+    
   }, []);
+
+
+  
   useEffect(()=>{
     AddAnim()
   },[])
@@ -121,7 +73,7 @@ function MapRoad() {
     <div>
         <div  className="first_period">
           <div className="center">
-            <div className={ scrolled ? "my-class" : "line"}><span className='number' >{number}</span></div>
+            <div className={ scrolledState ? "my-class" : "line"}><span className='number' >{numberState}</span></div>
           </div>
           <div className="page">
             <div className="left_side">
