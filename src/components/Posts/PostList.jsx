@@ -12,9 +12,9 @@ const PostList=({posts})=> {
         
         <div className='post_list'>
             {posts.map(post =>
-              <div className='item' 
-                key={post.id}
-                >
+               <div key={post.id} className={`post-${post.id}`}>
+               
+                
                 <PostItem  post={post} /> 
               </div>
             )}

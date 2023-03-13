@@ -13,15 +13,27 @@
 }
 
 
-.item{
-    width: 700px;
+.post-1{
+    width: 500px;
     height: 370px;
     background-color: red;
     margin: 10px;
 }
+.post-2{
+    width: 500px;
+    height: 370px;
+    background-color: green;
+    margin: 10px;
+}
+.post-3{
+    width: 500px;
+    height: 370px;
+    background-color: purple;
+    margin: 10px;
+}
 .post_list{
     height: 700px;
-    width: 1200px;
+    
     display: flex;
     flex-direction: row;
 }
