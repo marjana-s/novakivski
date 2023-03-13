@@ -2,7 +2,8 @@ import React, {} from 'react';
 import './App.css'
 import Main from './components/main/Main';
 import MapRoad from './components/MapRoad/MapRoad';
-import Posts from './components/Posts/Posts';
+import PostsPage from './components/Posts/PostsPage';
+
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
 
       {/* <Main></Main>
       <MapRoad></MapRoad> */}
-      <Posts></Posts>
+      <PostsPage></PostsPage>
       
       
     </div>

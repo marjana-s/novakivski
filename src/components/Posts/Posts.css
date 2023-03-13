@@ -1,0 +1,27 @@
+.Post_title{
+    width: 168px;
+    height: 63px;
+    left: 876px;
+    top: 152px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 51.918px;
+    line-height: 63px;
+    letter-spacing: 1.5px;
+}
+
+
+.item{
+    width: 700px;
+    height: 370px;
+    background-color: red;
+    margin: 10px;
+}
+.post_list{
+    height: 700px;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
