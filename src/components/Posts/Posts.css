@@ -1,9 +1,11 @@
-.Post_title{
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap');
+
+.post_title{
     width: 168px;
     height: 63px;
-    left: 876px;
-    top: 152px;
-
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -11,29 +13,138 @@
     line-height: 63px;
     letter-spacing: 1.5px;
 }
-
-
 .post-1{
-    width: 500px;
-    height: 370px;
-    background-color: red;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
     margin: 10px;
+    background-image: url('../../img/blackandwhite\ 2.png');
+     display: flex;
+    flex-direction: row;
+    align-items: end;
+    
 }
 .post-2{
-    width: 500px;
-    height: 370px;
-    background-color: green;
+    width: 1031px;
+    height: 300px;
+    border-radius: 20px;
     margin: 10px;
+    background-image: url('../../img/Kitaec.png');
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    
 }
 .post-3{
-    width: 500px;
-    height: 370px;
-    background-color: purple;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
     margin: 10px;
+    grid-column: 1 / -1;
+    background-image: url('../../img/Mask\ group.png');
+     display: flex;
+    flex-direction: row;
+    align-items: end;
+    
+    
+}
+.list{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    cursor: pointer;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.56);
+}
+.list:hover .svg circle{ 
+    stroke: #660000;
+    transition: 0.5s;
+}
+.list:hover .svg path{ 
+    fill: #660000;
+    transition: 0.5s;
 }
 .post_list{
-    height: 700px;
+    width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    transition: 1s;
+}
+.filter_button{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    background: #A30000;
+    border-radius: 21.5323px;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 5px 40px 5px 40px;
+    margin-right: 7px;
+    cursor:pointer;
+    transition: 0.5s;
+}
+.filter_button:hover{
+    background: #660000;
+    transition: 0.5s;
+}
+.post_page{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.filter_component{
+    margin-bottom:20px;
+}
+.title-2{
+ width: 860px;
+ height: 120px;
+ margin: 0 0 0px 20px;
+}
+.item-2{
+    font-size: 34px;
+    width: 1031px;
+   
+    
+}
+.title-1{
+ width: 300px;
+ height: 54px;
+ margin: 0 0 0px 20px;
+}
+.item{
     
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-1{
+    width: 400px; 
+}
+.title-3{
+    width: 300px;
+    height: 90px;
+    margin: 0 0 0px 20px;
+   }
+.item-3{
+    width: 400px;
+   }
+.item_button{
+    margin: 0 20px 10px 0;
+    cursor:pointer;
+}
+
+.svg circle{
+    transition: 0.5s;
+}
+.svg path{
+    transition: 0.5s;
 }
