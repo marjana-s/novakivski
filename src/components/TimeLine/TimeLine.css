@@ -10,7 +10,6 @@
     font-size: 28px;
     line-height: 34px;
     letter-spacing: 0.02em;
-
     color: #878787;
 }
 .periods{
@@ -23,6 +22,56 @@
 }
 .period{
     width: 200px;
-    
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    transition: 0.5s;
 }
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    color: white;
+    background-color: #660000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    color: white;
+  }
+  .hover-underline-animation:hover p{
+    color: white;
+    transition: 0.5s;
+  }
+  .time_act_hide{
+    position: fixed;
+    top: 20%;
+    left: 0%;
+    height: 90px;
+    width: 100%;
+    transition: 1.5s;
+    opacity: 0;
+  }
+  .time_act{
+    position: fixed;
+    top: 20%;
+    left: 0%;
+    height: 90px;width: 100%;
+    transition: 1.5s;
+    opacity: 1;
+  }
