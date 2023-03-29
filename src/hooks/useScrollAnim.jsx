@@ -5,15 +5,16 @@ export const useScrollAnim = () => {
     const scrollAnim = () =>{
         
         const scrolling = () => {
-        if (window.scrollY > 800 && window.scrollY <= 5400) {
+          const currentScroll = window.scrollY;
+        if (currentScroll > 800 && currentScroll <= 5400) {
         setScrolled(true);
-        } else if( window.scrollY > 6500 &&  window.scrollY <= 9500){
+        } else if( currentScroll > 6500 &&  currentScroll <= 9800){
         setScrolled(true);
-        }else if( window.scrollY > 10600 && window.scrollY <= 20400 ){
+        }else if( currentScroll > 10900 && currentScroll <= 20400 ){
         setScrolled(true);
-        }else if( window.scrollY > 21600 && window.scrollY <= 32400 ){
+        }else if( currentScroll > 21600 && currentScroll <= 32400 ){
         setScrolled(true);
-        }else if( window.scrollY > 33500  ){
+        }else if( currentScroll > 33400  ){
         setScrolled(true);
         }
         else  {

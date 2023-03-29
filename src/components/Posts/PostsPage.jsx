@@ -14,7 +14,7 @@ const PostsPage = () => {
   const [fileteredPosts,setFilterteredPosts] = useState(posts)
   const [ currentCategory,setCurrentCategory] = useState('all')
 
-  const filterPosts =(category) =>{
+  const filterPosts = (category) =>{
     if(category === 'all'){
       setFilterteredPosts(posts)
     }else{

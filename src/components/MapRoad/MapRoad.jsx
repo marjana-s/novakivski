@@ -40,14 +40,17 @@ import Pictures from '../../img/Pictures.png'
 import Statuya from '../../img/Statuya.png'
 import Sons from '../../img/Sons.png'
 import Society from '../../img/Society.png'
-
+import { useRef } from "react";
 import { useScrollAnim } from "../../hooks/useScrollAnim";
 import { useNumber } from "../../hooks/useNumber";
-
+import TimeLine from "../../components/TimeLine/TimeLine";
+ 
 
 function MapRoad() {
+  const myRef = useRef(null)
 
-
+  const executeScroll = () => myRef.current.scrollIntoView()  
+  
  
   const [scrollAnim,scrolledState] = useScrollAnim();
   const [numberGrow,numberState] = useNumber()
@@ -71,6 +74,8 @@ function MapRoad() {
 
   return (
     <div>
+      <div style={{height:1080,background:"black"}}></div>
+      <TimeLine></TimeLine>
         <div  className="first_period">
           <div className="center">
             <div className={ scrolledState ? "my-class" : "line"}><span className='number' >{numberState}</span></div>

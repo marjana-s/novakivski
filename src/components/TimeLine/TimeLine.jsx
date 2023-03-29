@@ -1,38 +1,57 @@
 import React, { useEffect, useState } from 'react'
 import './TimeLine.css'
+
 function TimeLine() {
-  const [active,setActicve] = useState(false)
+  const [active,setActive] = useState(false)
   
-  useEffect(()=>{
+  const children = document.querySelectorAll('.periods > *');
+  const firstChild = children[0];
+  const secondChild = children[1];
+  const thirdChild = children[2];
+  const fourthChild = children[3];
+  const fifthChild = children[4];
+      const sections = [{start:1000,end:5400,child:firstChild},
+    {start:5400,end:9800,child:secondChild},
+    {start:9800,end:20400,child:thirdChild},
+    {start:20400,end:32400,child:fourthChild},
+    {start:32400,end:Infinity,child:fifthChild}]
     const timeShow = () =>{
-    if(window.scrollY >= 1000){
-      setActicve(true)
+      if(window.scrollY >= 1000 ){
+        setActive(true);
+      }else{
+        setActive(false)
+      }
+     
+      sections.forEach((section) =>{ 
+      
+        const { start, end, child } = section;
+        const inView = window.scrollY > start &&  window.scrollY <= end;
+        if(inView && child){
+          child.classList.add('act');
+        } else if (child) {
+          child.classList.remove('act');
+        }
+      })
+      
     }
-    else {
-      setActicve(false)
-    }
-  }
-    window.addEventListener("scroll", timeShow);
-    return () => {
-    window.removeEventListener("scroll", timeShow);
-};
-  },[])
+     window.addEventListener('scroll', timeShow);
+ 
   return (
     <div>
-        <div className={active ? "time_act" : "time_act_hide" }>
+        <div className={active ? "time_act" : "time_act_hide" } >
 
         
           <div className="timeline" >
             <div className="periods">
-              <div className="hover-underline-animation"><p className='period period-1'>  1872 - 1899</p></div>
-              <div className='hover-underline-animation'> <p className='period period-2'> 1900-1902</p></div>
-              <div className='hover-underline-animation'><p className='period period-3'> 1903-1913</p></div>
-              <div className='hover-underline-animation'><p className='period period-4'>1923 - 1934</p></div>
-              <div className='hover-underline-animation'><p className='period period-5'>1935 - 2016</p></div>
+              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 1500 })} className="hover-underline-animation"><p className='period period-1'>  1872 - 1899</p></div>
+              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 6300 })} className='hover-underline-animation'> <p className='period period-2'> 1900-1902</p></div>
+              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 10500 })} className='hover-underline-animation'><p className='period period-3'> 1903-1913</p></div>
+              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 21000 })} className='hover-underline-animation'><p className='period period-4'>1923 - 1934</p></div>
+              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 33200 })} className='hover-underline-animation'><p className='period period-5'>1935 - 2016</p></div>
             </div>
           </div>
         </div>
-        <div style={{height:2000}}></div>
+        
 
     </div>
   )

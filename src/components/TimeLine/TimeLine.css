@@ -11,6 +11,7 @@
     line-height: 34px;
     letter-spacing: 0.02em;
     color: #878787;
+    z-index: 90;
 }
 .periods{
     
@@ -45,33 +46,54 @@
     left: 0;
     color: white;
     background-color: #660000;
-    transform-origin: bottom right;
+    transform-origin: bottom ;
     transition: transform 0.25s ease-out;
   }
   
-  .hover-underline-animation:hover::after {
+  .hover-underline-animation:hover:after {
     transform: scaleX(1);
-    transform-origin: bottom left;
-    color: white;
+    transform-origin: bottom ;
   }
   .hover-underline-animation:hover p{
     color: white;
     transition: 0.5s;
   }
+
+
   .time_act_hide{
     position: fixed;
-    top: 20%;
-    left: 0%;
+    bottom: 0;
     height: 90px;
     width: 100%;
-    transition: 1.5s;
+    transition: 1s;
     opacity: 0;
   }
   .time_act{
     position: fixed;
-    top: 20%;
-    left: 0%;
-    height: 90px;width: 100%;
-    transition: 1.5s;
+    bottom: 0;
+    height: 90px;
+    width: 100%;
+    transition: 1s;
     opacity: 1;
+  }
+  .act{
+    display: inline-block;
+    position: relative;
+  }
+  .act::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    color: white;
+    background-color: #660000;
+    
+    transition: transform 0.25s ease-out;
+  }
+  .act p{
+    color: white;
   }
