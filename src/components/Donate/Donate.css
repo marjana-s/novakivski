@@ -10,3 +10,32 @@
 
     color: #000000;
 }
+.donate_page{
+    height: 800px;
+    background-image: url(../../img/donate_bg.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.donate_info{
+    height: 800px;
+
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+}
+.donate_text{
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    width: 800px;
+    margin-top: 20px;
+    
+}
