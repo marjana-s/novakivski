@@ -1,0 +1,45 @@
+
+.page-link{
+    width: 40px;
+    height: 40px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #DFE3E8;
+    font-family: Montserrat;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    border-radius: 5.36px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.page-link-act{
+    border-radius: 5.36px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #A30000;
+    font-family: Montserrat;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #A30000;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 50px 0 50px 0;
+}

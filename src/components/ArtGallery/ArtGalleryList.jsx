@@ -1,15 +1,16 @@
 import React from 'react'
 import ArtGalleryItem from './ArtGalleryItem'
-
-const ArtGalleryList = ({arts}) => {
+import './ArtGallery.css'
+const ArtGalleryList = ({arts,setActiveItemChild,activeItem}) => {
+  
   return (
     <div>
        <div className="art_gallery_list">
 
             {
-              arts.map((art,i) =>
-                <div key={i}>
-                  <ArtGalleryItem art={art}></ArtGalleryItem>
+              arts.map((art) =>
+                <div  className='art_items' key={art.id}>
+                  <ArtGalleryItem  setActiveItemChild={setActiveItemChild} activeItem={activeItem}  art={art}></ArtGalleryItem>
                 </div>
                 )
             }

@@ -1,0 +1,46 @@
+.art_gallery{
+    background-color: #F0F0F0;
+
+}
+.art_gallery_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.art_gallery_info h2{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 61px;
+margin: 50px 0 50px 0;
+}
+.art_item{
+    display: flex;
+  flex-wrap: wrap;
+}
+
+
+.art_item_info img {
+  height: 400px;
+  width: 300px;
+}
+.art_gallery_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .art_items {
+    display: flex;
+    justify-content: center;
+    width: 33.33%; /* Задаємо ширину елемента, щоб він займав третю частину рядка */
+    box-sizing: border-box; /* Включаємо врахування padding та border у розмір елемента */
+    padding: 10px; /* Додаємо відступи до елементів для кращого візуального ефекту */
+   
+  }
+  .art{
+    height: 110%;
+    cursor: pointer;
+}
