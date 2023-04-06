@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import './ArtGallery.css'
-const ArtGalleryItem = ({art,setActiveItemChild,activeItem}) => {
-  const [active,setActive] = useState(false)
+const ArtGalleryItem = ({art, onClick}) => {
+  // const [active,setActive] = useState(false)
   
   return (
     <div className='art_item'>
-         <div onClick={()=> setActive(true)} className={`art_item_info ${active ? "active" : "non_act"}`} >
+         <div  className="art_item_info"  onClick={onClick} >
         <img  src={art.img} alt="" />
        </div>
        

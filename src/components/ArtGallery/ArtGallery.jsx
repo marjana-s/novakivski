@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Exhibition from '../../img/Exhibition.png'
 import Pagination from '../Pagination/Pagination'
 import ArtGalleryList from './ArtGalleryList'
+
 import './ArtGallery.css'
 const ArtGallery = () => {
   const [currentPage,setCurrentPage] = useState(1)
@@ -30,7 +31,7 @@ const ArtGallery = () => {
 
 ])
 const [active,setActive]= useState(false)
-const [activeItem,setActiveItem] = useState(false)
+
   const lastArtIndex = currentPage * artsPerPage
   const firstArtIndex = lastArtIndex - artsPerPage
   const currentArt = arts.slice(firstArtIndex,lastArtIndex)
@@ -38,24 +39,39 @@ const [activeItem,setActiveItem] = useState(false)
       setCurrentPage(pageNumber)
       setActive(pageNumber)
     }
-    const setActiveItemChild = () =>{
-      setActiveItem(true)
-    }
-      
-     
+
+     const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleClick = (image) => {
+    setSelectedImage(image);
+  };
+
+  const handleClose = () => {
+    setSelectedImage(null);
+  };
   return (
     
     <div>
       <div style={{height:90, background:'black'}}></div>
-      <div className="art_gallery">
+      <div  className="art_gallery">
         <div  className="art_gallery_info">
-          <h2 onClick={()=> setActiveItem(false)} >Арт галерея</h2>
-            <ArtGalleryList setActiveItemChild={setActiveItemChild} activeItem={activeItem} arts={currentArt}></ArtGalleryList>
-            <Pagination active={active} setActive={setActive} paginate={paginate} totalArts={arts.length} artsPerPage={artsPerPage} ></Pagination>
+          <h2>Арт галерея</h2>
+          <ArtGalleryList arts={currentArt} handleClick={handleClick} ></ArtGalleryList>
+      {selectedImage && (
+        <div className="modal-overlay" onClick={handleClose}>
+          <div className="modal">
+            <img src={selectedImage.img} alt={selectedImage.alt} />
+          </div>
+        </div>
+      )}
+            <Pagination active={active}  paginate={paginate} totalArts={arts.length} artsPerPage={artsPerPage} ></Pagination>
         </div>
       </div>
     </div>
   )
 }
+
+
+ 
 
 export default ArtGallery
